@@ -15,7 +15,7 @@ public class MarkdownParseTest {
 
     @Test
     public void getLink()throws IOException{
-        Path testFile = Path.of("./Tests/test-file8.md");
+        Path testFile = Path.of("test1.md");
         String result = Files.readString(testFile);
         ArrayList<String> links = MarkdownParse1.getLinks(result);
         List<String> output = List.of("https://something.com", "some-page.html");
