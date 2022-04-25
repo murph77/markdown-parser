@@ -19,12 +19,10 @@ public class MarkdownParse1 {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
-            if(markdown.contains("!") && markdown.charAt(openBracket - 1) == '!') {
-                currentIndex = closeParen + 1;
-                continue;
-            }
+            
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
+            System.out.println(currentIndex);
         }
 
         return toReturn;
